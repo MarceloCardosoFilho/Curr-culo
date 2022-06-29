@@ -20,12 +20,13 @@ body{
     color:aliceblue;
     padding:15px;
     margin-left: 0%;
-    border-radius:20px;
-    border: 0cm;
+    border-radius:30px;
+    border:black 10px;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
     cursor: pointer;
+    margin: 10px;
     }
     
     .botao:hover{
@@ -38,11 +39,9 @@ body{
     justify-content: space-around;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    padding-top: 5px;
-    padding-bottom: 5px;
     background-color: gainsboro;
     }
-    
+
     .foto{
     align-items: center;
     height: 225px;
@@ -51,8 +50,8 @@ body{
     }
     
     .fundo{
-    border: 1px solid black;
-    
+    border: 1px;
+    overflow: hidden;
     }
     
     .titulo{
@@ -69,6 +68,7 @@ body{
     text-align:justify;
     font-family: 'Times New Roman', Times, serif;
     margin-left: 20px;
+
     }
 
     .subtitulo{
