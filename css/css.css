@@ -292,3 +292,12 @@ body{
     }
 
 /*======================================================================================*/
+#fundinho{
+    display: flex;
+    float: left;
+    margin: 0%;
+    padding: 0%;
+    border: 10px solid rgb(255, 217, 0);
+    max-width: 600px;
+    max-height: 300px;
+}

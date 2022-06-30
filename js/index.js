@@ -57,6 +57,8 @@ function setup() {
     colisaoraquetecpu();
     showraquete(xraquetecpu, yraquetecpu);
     moveraquetecpu();
+    mostrarplacar();
+    marcaponto();
 }
 
 function showbolinha(){
@@ -109,3 +111,17 @@ function moveraquetecpu(){
     yraquetecpu += sraquetecpu;
 }
 
+function mostrarplacar(){
+    fill(255);
+    text(pontos, 278, 50);
+    text(pontoscpu, 321,50);
+}
+
+function marcaponto(){
+    if (xbolinha > 590){
+        pontos += 1;
+    }
+    if (xbolinha < 10){
+        pontoscpu += 1;
+    }
+}
