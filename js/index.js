@@ -99,13 +99,11 @@ function colisaoraquete(){
         sxbolinha *= -1;
     } 
 }
-
 function colisaoraquetecpu(){
     if (xbolinha + raio > xraquetecpu && ybolinha + raio < yraquetecpu + araquete && ybolinha + raio > yraquetecpu){
         sxbolinha*=-1;
     } 
 }
-
 function moveraquetecpu(){
     sraquetecpu = ybolinha - yraquetecpu - craquete / 2 - 30;
     yraquetecpu += sraquetecpu;
