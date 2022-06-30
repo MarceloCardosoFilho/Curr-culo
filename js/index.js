@@ -15,17 +15,44 @@ function esconder(){
     div.style.display = 'none';
 }
 /*======================================================================================*/
-console.log("Olá, se você está lendo essa mensagem, eu sei que você não é uma pessoa comum...");
+//VARIÁVEIS
+let xbolinha= 300;
+let ybolinha= 240;
+let dbolinha= 15;
+let raio = dbolinha/2;
 
-let a,b,c,ab,ac,bc;
+//VELOCIDADE DA BOLINHA
+let sxbolinha= 8;
+let sybolinha= 8;
 
-a=1;
-b=2;
-c=3;
 
-ab = a + b;
-ac = a + c;
-bc = b + c;
-
-console.log(bc);
+function setup() {
+    createCanvas(800, 600);
+  }
   
+  function draw() {
+    background(0);
+    showbolinha();
+    movebolinha();
+    colisaoborda();
+}
+
+function showbolinha(){
+    circle(xbolinha, ybolinha, dbolinha);
+}
+
+function movebolinha(){
+    xbolinha += sxbolinha;
+    ybolinha += sybolinha;
+}
+
+function colisaoborda(){
+    if (xbolinha + raio > width || xbolinha - raio < 0){
+        sxbolinha*=-1;
+    } 
+
+    if(ybolinha + raio > height || ybolinha - raio < 0){
+        sybolinha*=-1;
+    }   
+}
+
