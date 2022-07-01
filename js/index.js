@@ -26,13 +26,13 @@ let sxbolinha= 5;
 let sybolinha= 5;
 
 //VARÍAVEIS RAQUETE
-let xraquete = 20;
+let xraquete = 5;
 let yraquete = 125;
-let craquete = 3;
-let araquete = 50; 
+let craquete = 5;
+let araquete = 75; 
 
 //VARÍAVEIS CPU
-let xraquetecpu = 570;
+let xraquetecpu = 584;
 let yraquetecpu = 125;
 let sraquetecpu;
 
@@ -110,9 +110,14 @@ function moveraquetecpu(){
 }
 
 function mostrarplacar(){
+    textSize(36);
+    textAlign(CENTER);
+    fill(255,165,0)
+    rect(420,20,60,35);
+    rect(120,20,60,35);
     fill(255);
-    text(pontos, 278, 50);
-    text(pontoscpu, 321,50);
+    text(pontos, 150, 50);
+    text(pontoscpu, 450,50);
 }
 
 function marcaponto(){

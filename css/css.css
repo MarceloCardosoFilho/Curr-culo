@@ -258,7 +258,7 @@ body{
 .fundo{
     border: 1px;
     overflow: hidden;
-    }
+}
     
     .titulo{
     font-size: 36px;
@@ -292,10 +292,20 @@ body{
 /*======================================================================================*/
 #fundinho{
     display: flex;
-    float: left;
+    background-color: green;
+    position: relative;
     margin: 0%;
     padding: 0%;
     border: 10px solid rgb(255, 217, 0);
     max-width: 600px;
     max-height: 300px;
 }
+
+.linhadomeio{
+    left: 50%;
+    height: 98%;
+    background-color: white;
+    border: dashed;
+    position: absolute;
+}
+
