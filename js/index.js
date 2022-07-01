@@ -22,8 +22,8 @@ let dbolinha= 15;
 let raio = dbolinha/2;
 
 //VELOCIDADE DA BOLINHA
-let sxbolinha= 5;
-let sybolinha= 5;
+let sxbolinha= 10;
+let sybolinha= 3;
 
 //VARÍAVEIS RAQUETE
 let xraquete = 5;
@@ -40,14 +40,25 @@ let sraquetecpu;
 let pontos = 0;
 let pontoscpu = 0;
 
+//SONS
+let ponto;
+let raquetada; 
+let trilha; 
+
+function preload(){
+    trilha = loadSound("trilha.mp3");
+    ponto = loadSound("ponto.mp3");
+    raquetada = loadSound("raquetada.mp3");
+}
 
 function setup() {
     var myCanvas = createCanvas(600, 300);
     myCanvas.parent("fundinho");
+    trilha.play();
   }
   
   function draw() {
-    background(0);
+    background1();
     showbolinha();
     movebolinha();
     colisaoborda();
@@ -59,6 +70,10 @@ function setup() {
     moveraquetecpu();
     mostrarplacar();
     marcaponto();
+}
+
+function background1(){
+    background('green');
 }
 
 function showbolinha(){
@@ -97,6 +112,7 @@ function colisaoraquete(){
         ybolinha - raio < yraquete + araquete && 
         ybolinha + raio > yraquete){
         sxbolinha *= -1;
+
     } 
 }
 function colisaoraquetecpu(){
