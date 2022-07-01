@@ -103,10 +103,10 @@ function showraquete(x,y){
 
 function moveraquete(){
     if (keyIsDown(UP_ARROW)){
-         yraquete -=8;
+         yraquete -=10;
     }
     if (keyIsDown(DOWN_ARROW)){
-        yraquete +=8;
+        yraquete +=10;
    }
 }
 
@@ -133,14 +133,14 @@ function moveraquetecpu(){
 
 function calculaChanceDeErrar() {
     if (pontoscpu >= pontos) {
-      chanceDeErrar += 1;
-      if (chanceDeErrar >= 39){
-      chanceDeErrar = 40;
+      chanceDeErrar += 10;
+      if (chanceDeErrar >= 50){
+      chanceDeErrar = 51;
       }
     } else {
       chanceDeErrar -= 1;
       if (chanceDeErrar <= 35){
-      chanceDeErrar = 35;
+      chanceDeErrar = 30;
       }
     }
   }
