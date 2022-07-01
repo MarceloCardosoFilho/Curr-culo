@@ -18,7 +18,7 @@ function esconder(){
 //VARIÁVEIS BOLINHA
 let xbolinha= 300;
 let ybolinha= 240;
-let dbolinha= 15;
+let dbolinha= 20;
 let raio = dbolinha/2;
 
 //VELOCIDADE DA BOLINHA
@@ -26,15 +26,16 @@ let sxbolinha= 10;
 let sybolinha= 3;
 
 //VARÍAVEIS RAQUETE
-let xraquete = 5;
+let xraquete = 1;
 let yraquete = 125;
-let craquete = 5;
+let craquete = 10;
 let araquete = 75; 
 
 //VARÍAVEIS CPU
-let xraquetecpu = 584;
+let xraquetecpu = 589;
 let yraquetecpu = 125;
 let sraquetecpu;
+let chanceDeErrar = 0;
 
 //PLACAR 
 let pontos = 0;
@@ -46,16 +47,17 @@ let raquetada;
 let trilha; 
 
 function preload(){
-    trilha = loadSound("trilha.mp3");
-    ponto = loadSound("ponto.mp3");
-    raquetada = loadSound("raquetada.mp3");
+    trilha = loadSound("sons/trilha.mp3");
+    ponto = loadSound("sons/ponto.mp3");
+    raquetada = loadSound("sons/raquetada.mp3");
 }
 
 function setup() {
     var myCanvas = createCanvas(600, 300);
     myCanvas.parent("fundinho");
-    trilha.play();
-  }
+    trilha.loop();
+    trilha.setVolume(0.06);
+}
   
   function draw() {
     background1();
@@ -70,6 +72,7 @@ function setup() {
     moveraquetecpu();
     mostrarplacar();
     marcaponto();
+    calculaChanceDeErrar();
 }
 
 function background1(){
@@ -100,10 +103,10 @@ function showraquete(x,y){
 
 function moveraquete(){
     if (keyIsDown(UP_ARROW)){
-         yraquete -=10;
+         yraquete -=8;
     }
     if (keyIsDown(DOWN_ARROW)){
-        yraquete +=10;
+        yraquete +=8;
    }
 }
 
@@ -112,18 +115,35 @@ function colisaoraquete(){
         ybolinha - raio < yraquete + araquete && 
         ybolinha + raio > yraquete){
         sxbolinha *= -1;
-
+        raquetada.play();
+        raquetada.setVolume(0.2)
     } 
 }
 function colisaoraquetecpu(){
     if (xbolinha + raio > xraquetecpu && ybolinha + raio < yraquetecpu + araquete && ybolinha + raio > yraquetecpu){
         sxbolinha*=-1;
+        raquetada.play();
+        raquetada.setVolume(0.2)
     } 
 }
 function moveraquetecpu(){
-    sraquetecpu = ybolinha - yraquetecpu - craquete / 2 - 30;
-    yraquetecpu += sraquetecpu;
+    sraquetecpu = ybolinha - yraquetecpu -craquete-50;
+    yraquetecpu += sraquetecpu + chanceDeErrar;
 }
+
+function calculaChanceDeErrar() {
+    if (pontoscpu >= pontos) {
+      chanceDeErrar += 1;
+      if (chanceDeErrar >= 39){
+      chanceDeErrar = 40;
+      }
+    } else {
+      chanceDeErrar -= 1;
+      if (chanceDeErrar <= 35){
+      chanceDeErrar = 35;
+      }
+    }
+  }
 
 function mostrarplacar(){
     textSize(36);
@@ -139,8 +159,15 @@ function mostrarplacar(){
 function marcaponto(){
     if (xbolinha > 590){
         pontos += 1;
-    }
+        ponto.play();
+        ponto.setVolume(0.2);
+}
+
     if (xbolinha < 10){
         pontoscpu += 1;
+        ponto.play();
+        ponto.setVolume(0.2);
     }
 }
+
+
