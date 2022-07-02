@@ -16,23 +16,23 @@ function esconder(){
 }
 /*======================================================================================*/
 //VARIÁVEIS BOLINHA
-let xbolinha= 300;
-let ybolinha= 240;
-let dbolinha= 20;
+let xbolinha= 400;
+let ybolinha= 160;
+let dbolinha= 25;
 let raio = dbolinha/2;
 
 //VELOCIDADE DA BOLINHA
-let sxbolinha= 10;
-let sybolinha= 3;
+let sxbolinha= 6;
+let sybolinha= 4;
 
 //VARÍAVEIS RAQUETE
-let xraquete = 1;
+let xraquete = 10;
 let yraquete = 125;
-let craquete = 10;
+let craquete = 15;
 let araquete = 75; 
 
 //VARÍAVEIS CPU
-let xraquetecpu = 589;
+let xraquetecpu = 775;
 let yraquetecpu = 125;
 let sraquetecpu;
 let chanceDeErrar = 0;
@@ -53,7 +53,7 @@ function preload(){
 }
 
 function setup() {
-    var myCanvas = createCanvas(600, 300);
+    var myCanvas = createCanvas(800, 300);
     myCanvas.parent("fundinho");
     trilha.loop();
     trilha.setVolume(0.06);
@@ -73,6 +73,7 @@ function setup() {
     mostrarplacar();
     marcaponto();
     calculaChanceDeErrar();
+    raqueteBorda()
 }
 
 function background1(){
@@ -111,7 +112,7 @@ function moveraquete(){
 }
 
 function colisaoraquete(){
-    if (xbolinha - raio < xraquete + craquete && 
+    if (xbolinha - raio < xraquete + craquete &&
         ybolinha - raio < yraquete + araquete && 
         ybolinha + raio > yraquete){
         sxbolinha *= -1;
@@ -120,8 +121,10 @@ function colisaoraquete(){
     } 
 }
 function colisaoraquetecpu(){
-    if (xbolinha + raio > xraquetecpu && ybolinha + raio < yraquetecpu + araquete && ybolinha + raio > yraquetecpu){
-        sxbolinha*=-1;
+    if (xbolinha + raio > xraquetecpu && 
+        ybolinha + raio < yraquetecpu + araquete && 
+        ybolinha + raio > yraquetecpu){
+        sxbolinha *=-1;
         raquetada.play();
         raquetada.setVolume(0.2)
     } 
@@ -133,9 +136,9 @@ function moveraquetecpu(){
 
 function calculaChanceDeErrar() {
     if (pontoscpu >= pontos) {
-      chanceDeErrar += 10;
-      if (chanceDeErrar >= 50){
-      chanceDeErrar = 51;
+      chanceDeErrar += 100;
+      if (chanceDeErrar >= 100){
+      chanceDeErrar = 101;
       }
     } else {
       chanceDeErrar -= 1;
@@ -149,25 +152,45 @@ function mostrarplacar(){
     textSize(36);
     textAlign(CENTER);
     fill(255,165,0)
-    rect(420,20,60,35);
-    rect(120,20,60,35);
+    rect(520,20,60,35);
+    rect(220,20,60,35);
     fill(255);
-    text(pontos, 150, 50);
-    text(pontoscpu, 450,50);
+    text(pontos, 250, 50);
+    text(pontoscpu, 550,50);
 }
 
 function marcaponto(){
-    if (xbolinha > 590){
+    if (xbolinha > 780){
         pontos += 1;
         ponto.play();
         ponto.setVolume(0.2);
+        xbolinha = 400;
+        sxbolinha +=1;
+        sybolinha +=1;
 }
 
-    if (xbolinha < 10){
+    if (xbolinha < 20){
         pontoscpu += 1;
         ponto.play();
         ponto.setVolume(0.2);
+        xbolinha = 400;
     }
 }
+
+
+function raqueteBorda(){
+    if (yraquete > 225){
+    yraquete = 225;
+    } 
+    if (yraquete < 0){
+    yraquete = 0;
+    }
+    if (yraquetecpu > 225) {
+        yraquetecpu = 225;
+    }
+    if (yraquetecpu < 0){
+      yraquetecpu= 0 ;
+    }
+  }
 
 

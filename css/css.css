@@ -293,12 +293,11 @@ body{
 #fundinho{
     display: flex;
     position: relative;
+    left: 6%;
     float: left;
     margin: 0%;
     padding: 0%;
     border: 10px solid gray;
-    max-width: 600px;
-    max-height: 300px;
 }
 
 .linhadomeio{
