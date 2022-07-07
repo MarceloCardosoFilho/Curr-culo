@@ -191,8 +191,8 @@ function raqueteBorda(){
     if (yraquetecpu < 0){
       yraquetecpu= 0 ;
     }
-  }*/
-
+  }
+*/
   /*======================================================================================*/
 function setup() {
    createCanvas(600, 352);
