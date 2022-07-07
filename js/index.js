@@ -14,7 +14,7 @@ function esconder(){
     var div = document.getElementById("teste");
     div.style.display = 'none';
 }
-/*======================================================================================*/
+/*======================================================================================
 //VARIÁVEIS BOLINHA
 let xbolinha= 400;
 let ybolinha= 160;
@@ -191,6 +191,27 @@ function raqueteBorda(){
     if (yraquetecpu < 0){
       yraquetecpu= 0 ;
     }
-  }
+  }*/
+
+  /*======================================================================================*/
+function setup() {
+   createCanvas(600, 352);
+   somDaTrilha.loop(); 
+   somDaTrilha.setVolume(0.06);
+}
+  
+function draw() {
+    background(imagemDaEstrada);
+    showAtor();
+    moveAtor();
+    showCarro();
+    moveCarro();
+    voltaCarro();
+    verificaColisao();
+    incluiPontos();
+    marcaPontos();
+}
+
+
 
 

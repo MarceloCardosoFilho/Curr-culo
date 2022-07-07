@@ -289,7 +289,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-/*======================================================================================*/
+/*======================================================================================
 #fundinho{
     display: flex;
     position: relative;
@@ -307,4 +307,11 @@ body{
     border: dashed;
     position: absolute;
 }
+*/
+/*======================================================================================*/
 
+.noah{
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+}
