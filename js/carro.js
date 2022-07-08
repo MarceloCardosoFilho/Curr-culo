@@ -14,7 +14,7 @@ function showCarro(){
 
 function moveCarro(){
     for (let i = 0; i < sCarros.length; i++){
-        xCarros[i] -= (sCarros[i]+meusPontos) ;
+        xCarros[i] -= (sCarros[i]+meusPontos/2) ;
     }       
 }
 

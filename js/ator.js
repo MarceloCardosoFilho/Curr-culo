@@ -38,6 +38,7 @@ function verificaColisao(){
             voltaator();
             voltacarros();
             somDaColisao.play();
+            somDaColisao.setVolume(0.2)
             if(sePontosMaiorQueZero()){
                 meusPontos -= 1;
             }
@@ -69,6 +70,7 @@ function marcaPontos(){
         voltaator();
         voltacarros();
         somDoPonto.play();
+        somDoPonto.setVolume(0.2)
      }
 }
 
