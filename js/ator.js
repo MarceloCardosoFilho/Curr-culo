@@ -6,7 +6,7 @@ let meusPontos = 0;
 
 
 function showAtor(){
-    image(imagemDoAtor, xAtor,yAtor, 30, 30); 
+    image(imagemDoAtor, xAtor,yAtor, 20, 20); 
 }
 
 
