@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-    <link rel="icon" href="fotos/icone2.png">
+    <title>Pong</title>
+    <link rel="icon" href="fotos/pong.png">
     <link rel="stylesheet" href="css/css.css">
     
 </head>
 <body >
-    <div id="container" class="containerprojetos">
+    <div id="container" class="containerpong">
             <div class="cabeçalho">
                 <h1>MARCELO BUENO CARDOSO FILHO</h1>
                 <h1>PROJETOS</h1>
             </div>
             <div class="foto">
-                <img class="foto" src="fotos/jslogo.png">
+                <img class="foto" src="fotos/pong2.png">
             </div>
         </div> 
     <div class="botoes"> 
         <a class="botao" href="pong.html"> PONG</a>
         <a class="botao" href="freeway.html"> FREEWAY </a>
-        <a class="botao" href="currículo.html"> CURRÍCULO </a>  
+        <a class="botao" href="currículo.html"> CURRÍCULO </a> 
         <button id="show" class="botao">INFORMAÇÕES</button>
     </div>
     <div class="fundo">
+        <div id="pong"> 
+            <div class="linhadomeio"></div>
+        </div>     
         <div id="teste" class="container" onmouseleave="esconder()">
             <div class="perfil">
                 <p class="titulodiv">Perfil</p>
@@ -227,5 +230,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>    
     <script src="js/index.js"></script>
+    <script src="js/pong.js"></script>
 </body>
 </html>

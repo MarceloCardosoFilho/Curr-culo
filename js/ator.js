@@ -1,6 +1,6 @@
 //ATOR
 let xAtor = 100;
-let yAtor = 330;
+let yAtor = 325;
 let colisao = false;
 let meusPontos = 0;
 
@@ -36,6 +36,7 @@ function verificaColisao(){
         colisao = collideRectCircle(xCarros[i], yCarros[i], cCarros, aCarros, xAtor,yAtor, 10);
         if(colisao){
             voltaator();
+            voltacarros();
             somDaColisao.play();
             if(sePontosMaiorQueZero()){
                 meusPontos -= 1;
@@ -46,8 +47,14 @@ function verificaColisao(){
 
 
 function voltaator(){
-    yAtor = 330;
+    yAtor = 325;
     xAtor = 100;
+}
+
+function voltacarros(){
+    for (let i = 0; i < imagemDosCarros.length; i++){
+        xCarros = [650, 650, 650, 650, 650, 650, 1000, 1000, 1000, 1000, 1000, 1000];
+    }
 }
 
 function incluiPontos(){
@@ -61,8 +68,9 @@ function marcaPontos(){
     if(yAtor < 10){
         meusPontos +=1;
         voltaator();
+        voltacarros();
         somDoPonto.play();
-    }
+     }
 }
 
 function sePontosMaiorQueZero(){
@@ -70,7 +78,7 @@ function sePontosMaiorQueZero(){
 }
 
 function podemovery(){
-    return yAtor < 330;
+    return yAtor < 327;
 }
 
 function podemoverxl(){

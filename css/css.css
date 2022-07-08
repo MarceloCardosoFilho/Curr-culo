@@ -8,7 +8,25 @@ body{
     background-color: rgb(15, 15, 87);
     padding: 5px;
     }
-    
+
+    .containerfreeway{
+    display:flex;
+    justify-content: space-between;
+    background-color:rgb(50, 46, 70);
+    padding: 5px;
+}
+    .containerpong{
+    display:flex;
+    justify-content: space-between;
+    background-color:rgb(19, 112, 0);
+    padding: 5px;
+}
+    .containerprojetos{
+    display:flex;
+    justify-content: space-between;
+    background-color:rgb(197, 145, 0);
+    padding: 5px;
+}
     .cabeçalho{
     color: aliceblue;
     margin-left: 25px;
@@ -289,8 +307,8 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-/*======================================================================================
-#fundinho{
+/*======================================================================================*/
+#pong{
     display: flex;
     position: relative;
     left: 6%;
@@ -307,9 +325,19 @@ body{
     border: dashed;
     position: absolute;
 }
-*/
-/*======================================================================================*/
 
+/*======================================================================================*/
+#freeway{
+    display: flex;
+    position: relative;
+    width: 600px;
+    float: left;
+    border: 2px solid black;
+    left: 6%;
+    margin: 0%;
+    padding: 0%;
+}
+/*======================================================================================*/
 .noah{
     text-align: center;
     font-size: 18px;
