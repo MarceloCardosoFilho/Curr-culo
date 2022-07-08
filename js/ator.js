@@ -6,7 +6,7 @@ let meusPontos = 0;
 
 
 function showAtor(){
-    image(imagemDoAtor, xAtor,yAtor,20,20); 
+    image(imagemDoAtor, xAtor,yAtor, 30, 30); 
 }
 
 
@@ -33,7 +33,7 @@ function moveAtor(){
 
 function verificaColisao(){
     for(let i = 0; i < imagemDosCarros.length; i++){
-        colisao = collideRectCircle(xCarros[i], yCarros[i], cCarros, aCarros, xAtor,yAtor, 10);
+        colisao = collideRectCircle(xCarros[i], yCarros[i], cCarros, aCarros, xAtor, yAtor, 15);
         if(colisao){
             voltaator();
             voltacarros();
@@ -48,7 +48,6 @@ function verificaColisao(){
 
 function voltaator(){
     yAtor = 325;
-    xAtor = 100;
 }
 
 function voltacarros(){
@@ -65,7 +64,7 @@ function incluiPontos(){
 }
 
 function marcaPontos(){
-    if(yAtor < 10){
+    if(yAtor < -15){
         meusPontos +=1;
         voltaator();
         voltacarros();
