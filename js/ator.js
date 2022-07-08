@@ -33,7 +33,7 @@ function moveAtor(){
 
 function verificaColisao(){
     for(let i = 0; i < imagemDosCarros.length; i++){
-        colisao = collideRectCircle(xCarros[i], yCarros[i], cCarros, aCarros, xAtor, yAtor, 15);
+        colisao = collideRectCircle(xCarros[i], yCarros[i], cCarros, aCarros, xAtor, yAtor, 5);
         if(colisao){
             voltaator();
             voltacarros();
