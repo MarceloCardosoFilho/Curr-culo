@@ -343,3 +343,11 @@ body{
     font-size: 18px;
     font-style: italic;
 }
+/*======================================================================================*/
+.rodape{
+    width: 100%;
+    background-color:  rgb(15, 15, 87);
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
