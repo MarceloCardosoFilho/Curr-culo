@@ -14,3 +14,7 @@ function esconder(){
     var div = document.getElementById("teste");
     div.style.display = 'none';
 }
+
+/*======================================================================================*/
+
+
