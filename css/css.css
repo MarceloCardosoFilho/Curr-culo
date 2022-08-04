@@ -24,7 +24,7 @@ body{
     .containerprojetos{
     display:flex;
     justify-content: space-between;
-    background-color:rgb(197, 145, 0);
+    background-color:rgb(125, 0, 197);
     padding: 5px;
 }
     .cabeçalho{
@@ -342,4 +342,13 @@ body{
     text-align: center;
     font-size: 18px;
     font-style: italic;
+}
+/*======================================================================================*/
+.rodape{
+    width: 100%;
+    background-color:  rgb(15, 15, 87);
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+    padding: 100px 0px 20px 0px;
 }
