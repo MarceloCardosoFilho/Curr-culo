@@ -1,0 +1,48 @@
+body{
+    padding: 0%;
+    margin: 0%;
+}
+
+.cabecalho{
+    background-color: rebeccapurple;
+    height: 150px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.botao{
+    background: rgb(15, 15, 87);
+    color:aliceblue;
+    padding:15px;
+    margin-left: 0%;
+    border-radius:30px;
+    border:black 10px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+    
+.botao:hover{
+    background: black;
+}
+    
+.botoes{
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: gainsboro;
+}
+
+.conteudo{
+    margin: 5px;
+    margin-bottom: 300px;
+    padding: 5px;
+}
+
+.rodape{
+    background-color: rebeccapurple;
+    height: 200px;
+}
