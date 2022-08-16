@@ -1,0 +1,112 @@
+body{
+    padding: 0%;
+    margin: 0%;
+}
+
+:root{
+    --primary: rgba(255, 37, 37, 0.85);
+    --secondary: hsla(0, 0%, 0%, 1);
+}
+header{
+    height: 600px;
+    background: linear-gradient(125deg, var(--primary), var(--secondary)), 
+    url("../fotos/background.png") no-repeat center center / cover;
+    
+}
+
+#container{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    height: 100px;
+}
+
+.foto_logo{
+    height: 100px;
+    padding-left: 100px;
+}
+
+.lista{
+    height: 100px;
+    padding-top: 30px;
+}
+
+ul{
+    margin: 0%;
+}
+
+a{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: aliceblue;
+    
+}
+
+.titulo{
+    font-size: 36px;
+    padding-top: 100px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.subtitulo{
+    font-size: 30px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.sessao2{
+    margin: 40px;
+    padding: 40px;
+}
+
+.sessao3{
+    margin: 50px;
+    padding: 40px;
+}
+
+.sessao4{
+    margin: 50px;
+    padding: 40px;
+}
+
+.imagemmotor{
+    float: right;
+    width: 500px;
+    height: 350px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.imagemcabecote{
+    float: left;
+    width: 500px;
+    height: 350px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.imagemvirabrequin{
+    float: right;
+    width: 500px;
+    height: 350px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.rodape{
+    height: 300px;
+    background-color: rgb(138, 5, 5);
+}
